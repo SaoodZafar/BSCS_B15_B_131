@@ -39,18 +39,36 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "Looking Owsem",
-                      style: TextStyle(
-                        color: Colors.deepPurple,
-                        fontSize: 22.0,
-                        fontWeight: FontWeight.bold,
-                      ),
+                    alignment: Alignment.bottomCenter,
+                    child: Column(
+                      children: [
+                        Text(
+                          "Ummama Noor",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 30.0,
+                            letterSpacing: 2.0,
+                            color: Colors.black,
+                          ),
+                        ),
+                        Text(
+                          "Setti",
+                          style: TextStyle(
+                            fontSize: 30.0,
+                            letterSpacing: 3.0,
+                            color: Colors.black,
+                          ),
+                        ),
+
+                      ],
+                      
+                      
                     ),
                   )
+                  
                 ],
               ),
+              
             ),
             Container(
                 padding: EdgeInsets.all(20.0),
@@ -62,7 +80,7 @@ class MyApp extends StatelessWidget {
                         Text(
                           "Event Manager",
                           style: TextStyle(
-                            fontSize: 12.0,
+                            fontSize: 8.0,
                             color: Colors.white,
                           ),
                         ),
@@ -150,15 +168,12 @@ class MyApp extends StatelessWidget {
             )
           ],
         ),
-
         bottomNavigationBar: BottomAppBar(
           color: Colors.white10,
           notchMargin: 2.0,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-
             children: [
-
               Icon(Icons.sms),
               Icon(Icons.call),
               Icon(Icons.camera_alt),

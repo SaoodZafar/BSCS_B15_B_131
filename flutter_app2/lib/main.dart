@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +35,7 @@ class MyApp extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 0.0, vertical: 30.0),
-                height: 300,
+                height: 250,
                 color: Colors.blue,
                 child: Container(
                   child: Column(
@@ -65,7 +67,6 @@ class MyApp extends StatelessWidget {
                       Column(
                         children: [
                           Container(
-                            
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
@@ -101,30 +102,47 @@ class MyApp extends StatelessWidget {
                           )
                         ],
                       ),
-
                     ],
                   ),
                 ),
               ),
               Container(
-
                 color: Colors.black,
                 height: 60.0,
-                child: Row(children: [
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.arrow_drop_down,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 30.0,
+                    ),
+                    Text(
+                      "Recenet Chat",
+                      style: TextStyle(
+                          color: Colors.white, fontWeight: FontWeight.bold),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Image.asset(
+                          "../images/hj.jpg",
+                          height: 100.0,
+                          width: 100.0,
+                        ),
+                        
 
-                  Icon(Icons.arrow_drop_down,
-                    color: Colors.white,
-                  ),
-                  Text("Recenet Chat",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold
 
-
-                  ),
-                  )
-
-                ],),
+                      ],
+                    )
+                  ],
+                ),
               )
             ],
           ),

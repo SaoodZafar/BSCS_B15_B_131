@@ -74,24 +74,58 @@ class MyApp extends StatelessWidget {
                                   height: 100.0,
                                   width: 100.0,
                                 ),
-                                Text(
-                                  "Hy How Re you did You See This",
-                                  style: TextStyle(
-                                    fontSize: 30.0,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black,
-                                    backgroundColor: Colors.white,
-                                  ),
+                                Column(
+                                  children: [
+                                    Text(
+                                      "Hy How Re you did You See This",
+                                      style: TextStyle(
+                                        fontSize: 30.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black,
+                                        backgroundColor: Colors.white,
+                                      ),
+                                    ),
+                                    Text(
+                                      "You see The Latest ",
+                                      style: TextStyle(
+                                        fontSize: 30.0,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.black,
+                                        backgroundColor: Colors.white,
+                                      ),
+                                    ),
+                                  ],
                                 )
                               ],
                             ),
                           )
                         ],
-                      )
+                      ),
+
                     ],
                   ),
                 ),
               ),
+              Container(
+
+                color: Colors.black,
+                height: 60.0,
+                child: Row(children: [
+
+                  Icon(Icons.arrow_drop_down,
+                    color: Colors.white,
+                  ),
+                  Text("Recenet Chat",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold
+
+
+                  ),
+                  )
+
+                ],),
+              )
             ],
           ),
         ));

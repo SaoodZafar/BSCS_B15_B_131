@@ -11,6 +11,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        floatingActionButton: Padding(
+
+          padding: const EdgeInsets.only(bottom: 150.0),
+
+          child: FloatingActionButton(
+            child: Icon(
+              Icons.add,
+              color: Colors.black,
+            ),
+          ),
+        ),
         appBar: AppBar(
           backgroundColor: Colors.black,
           leading: Icon(Icons.menu),
@@ -41,34 +52,27 @@ class MyApp extends StatelessWidget {
                   Container(
                     alignment: Alignment.bottomCenter,
                     child: Column(
+
                       children: [
-                        Text(
-                          "Ummama Noor",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 30.0,
-                            letterSpacing: 2.0,
-                            color: Colors.black,
-                          ),
-                        ),
-                        Text(
-                          "Setti",
-                          style: TextStyle(
-                            fontSize: 30.0,
-                            letterSpacing: 3.0,
-                            color: Colors.black,
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0.0,270.0,200.0,0.0),
+                          child: Text(
+                            "Ummama Noor",
+
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 30.0,
+                              letterSpacing: 2.0,
+                              color: Colors.white,
+                            ),
                           ),
                         ),
 
                       ],
-                      
-                      
                     ),
                   )
-                  
                 ],
               ),
-              
             ),
             Container(
                 padding: EdgeInsets.all(20.0),

@@ -106,6 +106,14 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
               ),
+              Container(child: (
+              Row(
+                children: [
+                  
+
+                ],
+              )
+              ),),
               Container(
                 color: Colors.black,
                 height: 60.0,
@@ -136,11 +144,86 @@ class MyApp extends StatelessWidget {
                           height: 100.0,
                           width: 100.0,
                         ),
-                        
-
-
+                        Column(
+                          children: [
+                            Text(
+                              "Rachoor Das",
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 15.0,
+                            ),
+                            Text(
+                              "I Am on my way",
+                              style: TextStyle(
+                                fontSize: 10.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 200.0,
+                        ),
+                        Text(
+                          "5 Mint Ago",
+                          style: TextStyle(
+                            fontSize: 10.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.red,
+                          ),
+                        ),
                       ],
-                    )
+                    ),
+                    Row(
+                      children: [
+                        Image.asset(
+                          "../images/jkl.jpg",
+                          height: 100.0,
+                          width: 100.0,
+                        ),
+                        Column(
+                          children: [
+                            Text(
+                              "Michel Shelton",
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 15.0,
+                            ),
+                            Text(
+                              "Vedio Chat",
+                              style: TextStyle(
+                                fontSize: 10.0,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          width: 200.0,
+                        ),
+                        Text(
+                          "2 Days Ago",
+                          style: TextStyle(
+                            fontSize: 10.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.red,
+                          ),
+                        ),
+                      ],
+                    ),
+
                   ],
                 ),
               )

@@ -30,11 +30,9 @@ class MyApp extends StatelessWidget {
             ],
           ),
           body: Column(
-
             children: [
-
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 0.0,vertical: 30.0),
+                padding: EdgeInsets.symmetric(horizontal: 0.0, vertical: 30.0),
                 height: 300,
                 color: Colors.blue,
                 child: Container(
@@ -61,17 +59,35 @@ class MyApp extends StatelessWidget {
                           ),
                         ],
                       ),
-                      Column(children: [
-                        Row(
-                          children: [
-                            Image.asset("../images/ghj.jpg",
-                              height: 100.0,
-                              width: 100.0,
+                      SizedBox(
+                        height: 20.0,
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  "../images/ghj.jpg",
+                                  height: 100.0,
+                                  width: 100.0,
+                                ),
+                                Text(
+                                  "Hy How Re you did You See This",
+                                  style: TextStyle(
+                                    fontSize: 30.0,
+                                    fontWeight: FontWeight.bold,
+                                    color: Colors.black,
+                                    backgroundColor: Colors.white,
+                                  ),
+                                )
+                              ],
                             ),
-                            Text("Hy How Re you did You See This")
-                          ],
-                        )
-                      ],)
+                          )
+                        ],
+                      )
                     ],
                   ),
                 ),

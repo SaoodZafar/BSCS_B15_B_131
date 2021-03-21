@@ -10,179 +10,183 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        floatingActionButton: Padding(
+      home: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Scaffold(
+          floatingActionButton: Padding(
 
-          padding: const EdgeInsets.only(bottom: 150.0),
+            padding: const EdgeInsets.only(bottom: 100.0),
 
-          child: FloatingActionButton(
-            backgroundColor: Colors.white,
-            child: Icon(
-              Icons.add,
-              color: Colors.black,
-            ),
-          ),
-        ),
-        appBar: AppBar(
-          backgroundColor: Colors.black,
-          leading: Icon(Icons.menu),
-          title: Center(
-            child: Text(
-              "Profile",
-              style: TextStyle(
-                color: Colors.white,
+            child: FloatingActionButton(
+
+              backgroundColor: Colors.cyanAccent,
+              child: Icon(
+                Icons.add,
+                color: Colors.black,
               ),
             ),
           ),
-          actions: [Icon(Icons.settings)],
-        ),
-        body: Column(
-          children: [
-            Center(
-              child: Stack(
-                children: [
-                  Container(
-                    alignment: Alignment.center,
-                    child: Image(
-                      image: AssetImage("../images/ij.jpg"),
-                      height: 350.0,
-                      width: double.infinity,
-                      fit: BoxFit.cover,
+          appBar: AppBar(
+            backgroundColor: Colors.black,
+            leading: Icon(Icons.menu),
+            title: Center(
+              child: Text(
+                "Profile",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+            ),
+            actions: [Icon(Icons.settings)],
+          ),
+          body: Column(
+            children: [
+              Center(
+                child: Stack(
+                  children: [
+                    Container(
+                      alignment: Alignment.center,
+                      child: Image(
+                        image: AssetImage("../images/ij.jpg"),
+                        height: 350.0,
+                        width: double.infinity,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ),
-                  Container(
-                    alignment: Alignment.bottomCenter,
-                    child: Column(
+                    Container(
+                      alignment: Alignment.bottomCenter,
+                      child: Column(
 
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0.0,270.0,200.0,0.0),
-                          child: Text(
-                            "Ummama Noor",
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(0.0,270.0,200.0,0.0),
+                            child: Text(
+                              "Ummama Noor",
 
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30.0,
+                                letterSpacing: 2.0,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                  padding: EdgeInsets.all(20.0),
+                  color: Colors.blueAccent,
+                  child: Row(
+                    children: [
+                      Column(
+                        children: [
+                          Text(
+                            "Event Manager",
                             style: TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 30.0,
-                              letterSpacing: 2.0,
+                              fontSize: 8.0,
                               color: Colors.white,
                             ),
                           ),
-                        ),
-
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-            Container(
+                          Text(
+                            "San Fransico",
+                            style: TextStyle(
+                              fontSize: 12.0,
+                              color: Colors.white,
+                            ),
+                          )
+                        ],
+                      ),
+                    ],
+                  )),
+              Container(
                 padding: EdgeInsets.all(20.0),
                 color: Colors.blueAccent,
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Column(
                       children: [
                         Text(
-                          "Event Manager",
+                          "145K",
                           style: TextStyle(
-                            fontSize: 8.0,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 22.0,
+                            letterSpacing: 2.0,
                             color: Colors.white,
                           ),
                         ),
                         Text(
-                          "San Fransico",
+                          "Follwors",
                           style: TextStyle(
                             fontSize: 12.0,
+                            letterSpacing: 3.0,
+                            color: Colors.white,
+                          ),
+                        )
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "56K",
+                          style: TextStyle(
+                            fontSize: 22.0,
+                            color: Colors.white,
+                            letterSpacing: 2.0,
+                          ),
+                        ),
+                        Text(
+                          "Following",
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            letterSpacing: 3.0,
+                            color: Colors.white,
+                          ),
+                        )
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          "1,690",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 2.0,
+                            fontSize: 22.0,
+                            color: Colors.white,
+                          ),
+                        ),
+                        Text(
+                          "Likes",
+                          style: TextStyle(
+                            fontSize: 12.0,
+                            letterSpacing: 3.0,
                             color: Colors.white,
                           ),
                         )
                       ],
                     ),
                   ],
-                )),
-            Container(
-              padding: EdgeInsets.all(20.0),
-              color: Colors.blueAccent,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Column(
-                    children: [
-                      Text(
-                        "145K",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 22.0,
-                          letterSpacing: 2.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Text(
-                        "Follwors",
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          letterSpacing: 3.0,
-                          color: Colors.white,
-                        ),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "56K",
-                        style: TextStyle(
-                          fontSize: 22.0,
-                          color: Colors.white,
-                          letterSpacing: 2.0,
-                        ),
-                      ),
-                      Text(
-                        "Following",
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          letterSpacing: 3.0,
-                          color: Colors.white,
-                        ),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Text(
-                        "1,690",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 2.0,
-                          fontSize: 22.0,
-                          color: Colors.white,
-                        ),
-                      ),
-                      Text(
-                        "Likes",
-                        style: TextStyle(
-                          fontSize: 12.0,
-                          letterSpacing: 3.0,
-                          color: Colors.white,
-                        ),
-                      )
-                    ],
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
-        bottomNavigationBar: BottomAppBar(
-          color: Colors.white10,
-          notchMargin: 2.0,
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Icon(Icons.sms),
-              Icon(Icons.call),
-              Icon(Icons.camera_alt),
+                ),
+              )
             ],
+          ),
+          bottomNavigationBar: BottomAppBar(
+            color: Colors.white10,
+            notchMargin: 2.0,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Icon(Icons.sms),
+                Icon(Icons.call),
+                Icon(Icons.camera_alt),
+              ],
+            ),
           ),
         ),
       ),

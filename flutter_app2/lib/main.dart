@@ -75,27 +75,35 @@ class MyApp extends StatelessWidget {
                                   height: 100.0,
                                   width: 100.0,
                                 ),
-                                Column(
-                                  children: [
-                                    Text(
-                                      "Hy How Re you did You See This",
-                                      style: TextStyle(
-                                        fontSize: 30.0,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black,
-                                        backgroundColor: Colors.white,
-                                      ),
+                                Container(
+                                  width: 250,
+                                  height: 100,
+                                  color: Colors.white,
+                                  child: Padding(
+                                    padding: const EdgeInsets.fromLTRB(5,5,5,5),
+                                    child: Column(
+                                      children: [
+                                        Text(
+                                          "Hy How Re you did You ",
+                                          style: TextStyle(
+                                            fontSize: 16.0,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                            backgroundColor: Colors.white,
+                                          ),
+                                        ),
+                                        Text(
+                                          "You see The Latest ",
+                                          style: TextStyle(
+                                            fontSize: 16.0,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black,
+                                            backgroundColor: Colors.white,
+                                          ),
+                                        ),
+                                      ],
                                     ),
-                                    Text(
-                                      "You see The Latest ",
-                                      style: TextStyle(
-                                        fontSize: 30.0,
-                                        fontWeight: FontWeight.bold,
-                                        color: Colors.black,
-                                        backgroundColor: Colors.white,
-                                      ),
-                                    ),
-                                  ],
+                                  ),
                                 )
                               ],
                             ),

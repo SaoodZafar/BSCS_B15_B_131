@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 150.0),
 
           child: FloatingActionButton(
+            backgroundColor: Colors.white,
             child: Icon(
               Icons.add,
               color: Colors.black,

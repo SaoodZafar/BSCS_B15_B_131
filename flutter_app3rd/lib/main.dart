@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Seasonal',
+      title: 'Sign In Here',
       theme: ThemeData(primaryColor: Color.fromRGBO(68, 5, 246, 1)),
       home: LoginScreen(),
 

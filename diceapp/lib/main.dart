@@ -24,10 +24,10 @@ class Dice extends StatefulWidget {
 }
 
 class _DiceState extends State<Dice> {
-  var dice1_image = 1;
-  var dice2_image = 1;
-  var dice3_image = 1;
-  var dice4_image = 1;
+  var Dice1 = 1;
+  var Dice2 = 1;
+  var Dice3 = 1;
+  var Dice4 = 1;
   var counter1 = 0;
   var counter2 = 0;
   var counter3 = 0;
@@ -39,7 +39,8 @@ class _DiceState extends State<Dice> {
   int a = 0;
   int b = 0;
   int s = 0;
-  void findmax(n, x, y, z) {
+  var win = "Press for winner";
+  void _findmax(n, x, y, z) {
     a = max(n, x);
     b = max(y, z);
     s = max(a, b);
@@ -49,7 +50,7 @@ class _DiceState extends State<Dice> {
     setState(() {
       counter1++;
 
-      n = n + dice1_image;
+      n = n + Dice1;
     });
   }
 
@@ -57,7 +58,7 @@ class _DiceState extends State<Dice> {
     setState(() {
       counter2++;
 
-      x = x + dice2_image;
+      x = x + Dice2;
     });
   }
 
@@ -65,7 +66,7 @@ class _DiceState extends State<Dice> {
     setState(() {
       counter3++;
 
-      y = y + dice3_image;
+      y = y + Dice3;
     });
   }
 
@@ -73,8 +74,23 @@ class _DiceState extends State<Dice> {
     setState(() {
       counter4++;
 
-      z = z + dice4_image;
+      z = z + Dice4;
     });
+  }
+
+  void _maxshow(n, x, y, z, s) {
+    if (s == n) {
+      win = "Dice 1 is winner";
+    }
+    if (s == x) {
+      win = "Dice 2 is winner";
+    }
+    if (s == y) {
+      win = "Dice 3 is winner";
+    }
+    if (s == z) {
+      win = "Dice 4 is winner";
+    }
   }
 
   @override
@@ -87,7 +103,7 @@ class _DiceState extends State<Dice> {
               child: FlatButton(
                   onPressed: () {
                     setState(() {
-                      dice1_image = Random().nextInt(5) + 1;
+                      Dice1 = Random().nextInt(5) + 1;
                       _incerment1();
                       print("Totel Click 1 = $counter1");
                       print("Sum 1 = $n");
@@ -96,14 +112,14 @@ class _DiceState extends State<Dice> {
                   child: Image(
                     height: 100,
                     width: 100,
-                    image: new AssetImage("../images/d$dice1_image.png"),
+                    image: new AssetImage("../images/d$Dice1.png"),
                   )),
             ),
             Expanded(
               child: FlatButton(
                   onPressed: () {
                     setState(() {
-                      dice2_image = Random().nextInt(5) + 1;
+                      Dice2 = Random().nextInt(5) + 1;
                       _incerment2();
                       print("Totel Click 2 = $counter2");
                       print("Sum 2 = $x");
@@ -112,7 +128,7 @@ class _DiceState extends State<Dice> {
                   child: Image(
                     height: 100,
                     width: 100,
-                    image: new AssetImage("../images/d$dice2_image.png"),
+                    image: new AssetImage("../images/d$Dice2.png"),
                   )),
             ),
           ],
@@ -127,7 +143,7 @@ class _DiceState extends State<Dice> {
               child: FlatButton(
                   onPressed: () {
                     setState(() {
-                      dice3_image = Random().nextInt(5) + 1;
+                      Dice3 = Random().nextInt(5) + 1;
                       _incerment3();
                       print("Totel Click 3 = $counter3");
                       print("Sum 3 = $y");
@@ -136,14 +152,14 @@ class _DiceState extends State<Dice> {
                   child: Image(
                     height: 100,
                     width: 100,
-                    image: new AssetImage("../images/d$dice3_image.png"),
+                    image: new AssetImage("../images/d$Dice3.png"),
                   )),
             ),
             Expanded(
               child: FlatButton(
                   onPressed: () {
                     setState(() {
-                      dice4_image = Random().nextInt(5) + 1;
+                      Dice4 = Random().nextInt(5) + 1;
                       _incerment4();
                       print("Totel Click 4 = $counter4");
                       print("Sum 4 = $z");
@@ -152,25 +168,49 @@ class _DiceState extends State<Dice> {
                   child: Image(
                     height: 100,
                     width: 100,
-                    image: new AssetImage("../images/d$dice4_image.png"),
+                    image: new AssetImage("../images/d$Dice4.png"),
                   )),
             ),
           ],
         ),
+        Expanded(
+          child: Center(
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [Text("Dice 1 Totel = $n"), Text("Dice 2 Totel = $x")],
+            ),
+          ),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [Text("Dice 3 Totel = $y"), Text("Dice 4 Totel = $z")],
+        ),
         SizedBox(
           height: 50,
         ),
-        Row(
-          children: [
-
-    TextField(
-    obscureText: true,
-    decoration: InputDecoration(
-    border: OutlineInputBorder(),
-    labelText: 'Dice1',
-    ),
-    )
-  ])
+        Expanded(
+          child: FlatButton(
+            onPressed: () {
+              setState(() {
+                _findmax(n, x, y, z);
+              });
+            },
+            child: Text("Show Max =$s "),
+          ),
+        ),
+        SizedBox(
+          height: 50,
+        ),
+        Expanded(
+          child: FlatButton(
+            onPressed: () {
+              setState(() {
+                _maxshow(n, x, y, z, s);
+              });
+            },
+            child: Text(" $win"),
+          ),
+        ),
       ],
     );
   }

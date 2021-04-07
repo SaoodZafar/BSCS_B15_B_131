@@ -34,19 +34,17 @@ class _DiceState extends State<Dice> {
   var counter4 = 0;
   var n = 0;
   var x = 0;
-  var y=0;
-  var z=0;
-  int a=0;
-  int b=0;
-  int s=0;
-  void findmax(n,x,y,z){
-    a=max(n, x);
-    b=max(y, z);
-    s=max(a, b);
-
-
-
+  var y = 0;
+  var z = 0;
+  int a = 0;
+  int b = 0;
+  int s = 0;
+  void findmax(n, x, y, z) {
+    a = max(n, x);
+    b = max(y, z);
+    s = max(a, b);
   }
+
   void _incerment1() {
     setState(() {
       counter1++;
@@ -54,6 +52,7 @@ class _DiceState extends State<Dice> {
       n = n + dice1_image;
     });
   }
+
   void _incerment2() {
     setState(() {
       counter2++;
@@ -61,6 +60,7 @@ class _DiceState extends State<Dice> {
       x = x + dice2_image;
     });
   }
+
   void _incerment3() {
     setState(() {
       counter3++;
@@ -68,6 +68,7 @@ class _DiceState extends State<Dice> {
       y = y + dice3_image;
     });
   }
+
   void _incerment4() {
     setState(() {
       counter4++;
@@ -93,6 +94,8 @@ class _DiceState extends State<Dice> {
                     });
                   },
                   child: Image(
+                    height: 100,
+                    width: 100,
                     image: new AssetImage("../images/d$dice1_image.png"),
                   )),
             ),
@@ -107,6 +110,8 @@ class _DiceState extends State<Dice> {
                     });
                   },
                   child: Image(
+                    height: 100,
+                    width: 100,
                     image: new AssetImage("../images/d$dice2_image.png"),
                   )),
             ),
@@ -129,6 +134,8 @@ class _DiceState extends State<Dice> {
                     });
                   },
                   child: Image(
+                    height: 100,
+                    width: 100,
                     image: new AssetImage("../images/d$dice3_image.png"),
                   )),
             ),
@@ -143,31 +150,27 @@ class _DiceState extends State<Dice> {
                     });
                   },
                   child: Image(
+                    height: 100,
+                    width: 100,
                     image: new AssetImage("../images/d$dice4_image.png"),
                   )),
             ),
           ],
         ),
-        Row(children: [
-          Text("Show Maximum",
+        SizedBox(
+          height: 50,
+        ),
+        Row(
+          children: [
 
-
-          ),
-          Expanded(
-            child: FlatButton(
-                onPressed: () {
-                  setState(() {
-                    dice2_image = Random().nextInt(5) + 1;
-                    _incerment2();
-                    print("Show Max = $s");
-                   
-                  });
-                },
-                child: Image(
-                  image: new AssetImage("../images/d$dice2_image.png"),
-                )),
-          ),
-        ],)
+    TextField(
+    obscureText: true,
+    decoration: InputDecoration(
+    border: OutlineInputBorder(),
+    labelText: 'Dice1',
+    ),
+    )
+  ])
       ],
     );
   }

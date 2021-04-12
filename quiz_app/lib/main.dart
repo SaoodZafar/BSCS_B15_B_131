@@ -7,6 +7,7 @@ quizbrain brain = quizbrain();
 
 void main() {
   return runApp(MaterialApp(
+
     home: Scaffold(
       appBar: AppBar(
         title: Text("Quiz App"),

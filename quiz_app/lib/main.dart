@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'quiz_brain.dart';
+import 'package:rflutter_alert/rflutter_alert.dart';
+quizbrain brain = quizbrain();
+
+
 
 void main() {
   return runApp(MaterialApp(
@@ -19,6 +24,28 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
   List <Icon> scorekeeper=[];
+  void checkans(bool userslect){
+bool correctans = brain.getcorrectans();
+if(brain.isfinshed()==true){
+  Alert(context: context,
+  title: "Quiz is End",
+  desc: "You have reached at the end of Quiz").show();
+  brain.resest();
+  scorekeeper=[];
+}else{
+if(userslect==correctans){
+ setState(() {
+   scorekeeper.add(Icon(Icons.check,color: Colors.green,));
+ });
+}
+else{
+  setState(() {
+    scorekeeper.add(Icon(Icons.close,color: Colors.red,));
+  });
+}
+brain.nextquestion();
+}
+  }
   @override
   Widget build(BuildContext context) {
 
@@ -32,7 +59,7 @@ class _QuizState extends State<Quiz> {
               padding: EdgeInsets.all(10.0),
               child: Center(
                 child: Text(
-                  "Question 1",
+                  brain.getquestiontext(),
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 25.0,
@@ -54,11 +81,7 @@ class _QuizState extends State<Quiz> {
                     ),
                   ),
                   onPressed: () {
-                    setState(() {
-                      scorekeeper.add(Icon(Icons.check,
-                        color: Colors.green,
-                      ),);
-                    });
+                   checkans(true);
 
                   },
                 ))),
@@ -77,12 +100,7 @@ class _QuizState extends State<Quiz> {
                     ),
                   ),
                   onPressed: () {
-                    setState(() {
-                      scorekeeper.add(Icon(Icons.close,
-                        color: Colors.red,
-                      ));
-
-                    });
+                  checkans(false);
 
 
                   },

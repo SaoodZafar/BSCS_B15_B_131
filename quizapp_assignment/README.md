@@ -1,16 +1,2 @@
-# quizapp_assignment
-
-Quiz App Tru False and Multipal choic
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Icon Change](https://github.com/SaoodZafar/BSCS_B15_B_131/blob/main/quizapp_assignment/InkedWhatsApp%20Image%202021-04-20%20at%205.36.22%20PM_LI.jpg)
+![Splash Screen](https://github.com/SaoodZafar/BSCS_B15_B_131/blob/main/quizapp_assignment/WhatsApp%20Image%202021-04-20%20at%205.36.22%20PM.jpeg)

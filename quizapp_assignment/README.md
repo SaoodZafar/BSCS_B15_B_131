@@ -2,3 +2,4 @@
 ![Splash Screen](https://github.com/SaoodZafar/BSCS_B15_B_131/blob/main/quizapp_assignment/WhatsApp%20Image%202021-04-20%20at%205.36.22%20PM.jpeg)
 ![Contect Us](https://github.com/SaoodZafar/BSCS_B15_B_131/blob/main/quizapp_assignment/1.PNG)
 ![true false](https://github.com/SaoodZafar/BSCS_B15_B_131/blob/main/quizapp_assignment/3.PNG)
+![mcq ss](https://github.com/SaoodZafar/BSCS_B15_B_131/blob/main/quizapp_assignment/mcq.PNG)

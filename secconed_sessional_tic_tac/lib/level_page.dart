@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:secconed_sessional_tic_tac/Contect_us.dart';
+import 'dart:io';
+import 'package:contactus/contactus.dart';
 
 class levl extends StatefulWidget {
   @override
@@ -62,6 +65,46 @@ class _levlState extends State<levl> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 40,
+
+              ),
+              RaisedButton(
+                color: Colors.green,
+
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0)),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => contectus()),
+                  );
+                },
+                child: Text("Contect Us",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 40,
+
+              ),
+              RaisedButton(
+                color: Colors.green,
+
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10.0)),
+               onPressed: () => exit(0),
+                child: Text("Exit",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold
+                  ),
+                ),
+              ),
+
             ],
           ),
         ),
@@ -88,11 +131,21 @@ class _levlState extends State<levl> {
          ListTile(
            leading: Icon(Icons.contacts_outlined),
            title: Text("Contect US"),
+
+           onTap: () {}
+
+    ),
+
+         Divider(
+           height: 1,
+           thickness: 1,
          ),
 
          ListTile(
            leading: Icon(Icons.exit_to_app_rounded),
            title: Text("Exit"),
+             onTap: () =>exit(0)
+
          ),
        ],
      ),

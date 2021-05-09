@@ -6,3 +6,4 @@
 ![xit Button](https://github.com/SaoodZafar/BSCS_B15_B_131/blob/main/secconed_sessional_tic_tac/exit%20button.PNG)
 ![Drawer Some Function](https://github.com/SaoodZafar/BSCS_B15_B_131/blob/main/secconed_sessional_tic_tac/drawerfunction.PNG)
 ![All Button On Simple Level](https://github.com/SaoodZafar/BSCS_B15_B_131/blob/main/secconed_sessional_tic_tac/All%20Button.jpeg)
+![Result Level 1](https://github.com/SaoodZafar/BSCS_B15_B_131/blob/main/secconed_sessional_tic_tac/result%20simple%20level.jpeg)

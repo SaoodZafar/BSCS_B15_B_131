@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:secconed_sessional_tic_tac/Contect_us.dart';
 import 'package:secconed_sessional_tic_tac/level.dart';
 import 'dart:io';
+import 'package:secconed_sessional_tic_tac/hard_level.dart';
 
 
 class levl extends StatefulWidget {
@@ -57,7 +58,11 @@ class _levlState extends State<levl> {
                   color: Colors.red,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0)),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => hardlevel()));
+                  },
                   child: Text(
                     "Heigh Level",
                     style: TextStyle(

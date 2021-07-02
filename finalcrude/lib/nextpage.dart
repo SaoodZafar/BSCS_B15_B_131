@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 class nextpages extends StatefulWidget {
   const nextpages({Key? key}) : super(key: key);
@@ -109,6 +111,36 @@ class _nextpagesState extends State<nextpages> {
                     color: Colors.white, fontWeight: FontWeight.bold),
               ),
             ),
+            SizedBox(height: 20),
+            RaisedButton(
+              color: Colors.green,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0)),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => nextpages()),
+                );
+              },
+              child: Text(
+                "View",
+                style: TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+            ),
+            SizedBox(height: 20),
+            RaisedButton(
+              color: Colors.green,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10.0)),
+              onPressed: () => exit(0),
+              child: Text(
+                "Exit",
+                style: TextStyle(
+                    color: Colors.white, fontWeight: FontWeight.bold),
+              ),
+            ),
+
           ],
         ),
 

@@ -3,6 +3,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:finalcrude/mainpage.dart';
 
 
+
 void main() => runApp((Splashscreen()));
 
 class Splashscreen extends StatefulWidget {
